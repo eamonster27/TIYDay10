@@ -5,57 +5,57 @@
 //Computer randomly generates choice
 
 //Comparison
-RockPaperScissors()
+RockPaperScissors();
 //Winner output
 
 //Restart
 
 function RockPaperScissors(){
   //User selection.
-  var userSelection = prompt("Do you choose Rock, Paper or Scissors? Enter Quit to exit.")
+  var userSelection = prompt("Do you choose Rock, Paper or Scissors? Enter Quit to exit.");
   //Random number selection for computer.
-  var compSelection = Math.random()
+  var compSelection = Math.random();
   if(compSelection <0.34) {
-    compSelection = "Rock"
+    compSelection = "Rock";
   }
   else if(compSelection <=0.67) {
-    compSelection = "Paper"
+    compSelection = "Paper";
   }
   else {
-    compSelection = "Scissors"
+    compSelection = "Scissors";
   }
-  console.log("Computer selection: " + compSelection)
+  console.log("Computer selection: " + compSelection);
   //------------------------------------------------------
-  var userWins = true
+  var userWins = false;
 
   if(userSelection === "Quit" || userSelection === "quit") {
-    return
+    return;
   }
   else if(compSelection === userSelection){
-    alert("Draw")
+    alert("Draw");
   }
   else{
     if(compSelection === "Rock" || userSelection === "rock"){
-      if(userSelection === "Scissors"  || userSelection === "scissors"){
-        userWins = false
+      if(userSelection === "Paper"  || userSelection === "paper"){
+        userWins = true;
       }
     }
     else if(compSelection === "Paper" || userSelection === "paper"){
-      if(userSelection === "Rock" || userSelection === "rock"){
-        userWins = false
+      if(userSelection === "Scissors" || userSelection === "scissors"){
+        userWins = true;
       }
     }
     else if(compSelection === "Scissors" || userSelection === "scissors"){
-      if(userSelection === "Paper" || userSelection === "paper"){
-        userWins = false
-      }
-    }
+      if(userSelection === "Rock" || userSelection === "rock"){
+        userWins = true;
+      };
+    };
     if(userWins){
-      alert("User Wins")
+      alert("User Wins");
     }
     else{
-      alert("Computer Wins")
+      alert("Computer Wins");
     }
   }
-  RockPaperScissors()
+  RockPaperScissors();
 };
