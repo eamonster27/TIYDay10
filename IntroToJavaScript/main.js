@@ -3,25 +3,25 @@
 // 1.
 // What does `givenName` equal right now?
 var givenName;
-// A:
+// A: undefined
 
 
 // 2.
 // What is `givenName` set to right now?
 givenName = "Tim";
-// A:
+// A: Tim
 
 
 // 3.
 // What is `givenName` set to right now?
 givenName = givenName;
-// A:
+// A: itself or more specifically Tim
 
 
 // 4.
 // What is `greeting` set to?
 var greeting = "Hello, how are you? " + givenName;
-// A:
+// A: Hello, how are you? Tim
 
 
 // 5.
@@ -29,13 +29,13 @@ var greeting = "Hello, how are you? " + givenName;
 var high = 50;
 var low  = 10;
 var math = high - low;
-// A:
+// A: 40
 
 
 // 6.
 // What is `math` set to?
 math = high - "5";
-// A:
+// A: 45
 
 
 // 7.
@@ -45,19 +45,21 @@ math = high - "5";
 var born = 1984;
 var today = 2017;
 // A:
+var age = "Tim is " + (today - born) + " years old"
 
 
 // 8.
 // Adjust this code. Store some information in the following variables.
 // A:
-var yourName;
-var instructorName;
+var yourName = "Eamon";
+var instructorName = "Kenji";
 
 
 // 9.
 // Update the variables `yourName` and `instructorName` so the expression below reads correctly.
 // A:
-
+yourName = "Eamon Bachari";
+instructorName = "Kenji Lastname";
 
 // This statement should read correctly
 var statement = yourName + " is taking a class at The Iron Yard, my instructor's name is " + instructorName;
@@ -66,59 +68,59 @@ var statement = yourName + " is taking a class at The Iron Yard, my instructor's
 // 10.
 // We've created a variable named after each primitive type.
 // Use the `=` operator to assign a value to each variable matching the type in the name.
-var myNumber;
-var myString;
-var myBoolean;
+var myNumber = 5;
+var myString = "String";
+var myBoolean = true;
 // This one's a little tricky - think carefully about what makes a value "undefined"!
 var myUndefined;
-// A:
+// A: Declaring a variable without assigning it a value
 
 
 // For questions 11 - 19: List which boolean value will be stored in each variable. (Remember: `==` does not check data type)
 
 // 11.
 var x = (false == 0);
-// A.
+// A. true
 
 
 // 12.
 var y = (false == "");
-// A.
+// A. true
 
 
 // 13.
 var z = (0 == "");
-// A.
+// A. true
 
 
 // 14.
 var a = (null == null);
-// A.
+// A. true
 
 
 // 25.
 var b = (undefined == undefined);
-// A.
+// A. true
 
 
 // 16.
 var c = (undefined == null);
-// A.
+// A. true
 
 
 // 17.
 var d = (null == false);
-// A.
+// A. true
 
 
 // 18.
 var e = (NaN == null);
-// A.
+// A. false
 
 
 // 19.
 var f = (NaN == NaN);
-// A.
+// A. false. NaN means not a number. It may be necessary for two NaNs to be NaNs in order to be equivalent but it is not sufficient for them to actually hold the same value.
 
 
 // 20.
@@ -127,7 +129,7 @@ var f = (NaN == NaN);
 // A:
 var thirsty = true;
 
-{
+if(thirsty){
   console.log("I'm parched!");
 } else {
   console.log("I've had enough to drink.");
@@ -143,7 +145,7 @@ if(x){
 } else {
 	console.log("False!");
 }
-// A:
+// A: False!
 
 
 // 22.
@@ -152,7 +154,7 @@ if(""){
 } else {
 	console.log("False!");
 }
-// A:
+// A: False
 
 
 // 23.
@@ -164,7 +166,7 @@ if(x){
 } else {
 	console.log("False!");
 }
-// A:
+// A: False
 
 
 // 24.
@@ -173,7 +175,7 @@ if(false){
 } else {
 	console.log("False!");
 }
-// A:
+// A: False. If condition will never evaluate as true.
 
 
 // 25.
@@ -182,7 +184,7 @@ if(-5 && 5){
 } else {
 	console.log("False!");
 }
-// A:
+// A: True
 
 
 // 26.
@@ -191,7 +193,7 @@ if("Hello World!"){
 } else {
 	console.log("False!");
 }
-// A:
+// A: True
 
 
 // 27.
@@ -200,7 +202,7 @@ if({}){
 } else {
 	console.log("False!");
 }
-// A:
+// A: False
 
 
 // 28.
@@ -209,7 +211,7 @@ if({name: "Yehuda Katz"}){
 } else {
 	console.log("False!");
 }
-// A:
+// A: True
 
 
 // 29.
@@ -218,7 +220,7 @@ if(new Date()){
 } else {
 	console.log("False!");
 }
-// A:
+// A: True
 
 
 // 30.
